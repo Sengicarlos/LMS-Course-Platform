@@ -8335,7 +8335,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$be
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$better$2d$auth$40$1$2e$3$2e$27_next$40$15$2e$_6e872b5015b7247b6501be0ddf07cdbc$2f$node_modules$2f$better$2d$auth$2f$dist$2f$shared$2f$better$2d$auth$2e$mPTDVpKF$2e$mjs__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__b__as__betterAuth$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/better-auth@1.3.27_next@15._6e872b5015b7247b6501be0ddf07cdbc/node_modules/better-auth/dist/shared/better-auth.mPTDVpKF.mjs [app-route] (ecmascript) <export b as betterAuth>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$better$2d$auth$40$1$2e$3$2e$27_next$40$15$2e$_6e872b5015b7247b6501be0ddf07cdbc$2f$node_modules$2f$better$2d$auth$2f$dist$2f$adapters$2f$prisma$2d$adapter$2f$index$2e$mjs__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/better-auth@1.3.27_next@15._6e872b5015b7247b6501be0ddf07cdbc/node_modules/better-auth/dist/adapters/prisma-adapter/index.mjs [app-route] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/db.ts [app-route] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$better$2d$auth$40$1$2e$3$2e$27_next$40$15$2e$_6e872b5015b7247b6501be0ddf07cdbc$2f$node_modules$2f$better$2d$auth$2f$dist$2f$plugins$2f$index$2e$mjs__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/better-auth@1.3.27_next@15._6e872b5015b7247b6501be0ddf07cdbc/node_modules/better-auth/dist/plugins/index.mjs [app-route] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$better$2d$auth$40$1$2e$3$2e$27_next$40$15$2e$_6e872b5015b7247b6501be0ddf07cdbc$2f$node_modules$2f$better$2d$auth$2f$dist$2f$plugins$2f$email$2d$otp$2f$index$2e$mjs__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/better-auth@1.3.27_next@15._6e872b5015b7247b6501be0ddf07cdbc/node_modules/better-auth/dist/plugins/email-otp/index.mjs [app-route] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$env$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/env.ts [app-route] (ecmascript)");
+;
 ;
 ;
 ;
@@ -8350,7 +8353,14 @@ const auth = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f
             clientId: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$env$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["env"].GITHUB_CLIENT_ID,
             clientSecret: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$env$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["env"].GIHUB_SECRET
         }
-    }
+    },
+    plugins: [
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$better$2d$auth$40$1$2e$3$2e$27_next$40$15$2e$_6e872b5015b7247b6501be0ddf07cdbc$2f$node_modules$2f$better$2d$auth$2f$dist$2f$plugins$2f$email$2d$otp$2f$index$2e$mjs__$5b$app$2d$route$5d$__$28$ecmascript$29$__["emailOTP"])({
+            async sendVerificationOTP ({ email, otp }) {
+            //sending the email to the user 
+            }
+        })
+    ]
 });
 }),
 "[project]/app/api/auth/[...all]/route.ts [app-route] (ecmascript)", ((__turbopack_context__) => {

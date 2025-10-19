@@ -1,7 +1,9 @@
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import prisma from "./db";
+import { emailOTP } from "better-auth/plugins"
 import { env } from "./env";
+import { resend } from "./resend";
 
 
 export const auth = betterAuth({
@@ -15,4 +17,18 @@ export const auth = betterAuth({
             clientSecret:env.GIHUB_SECRET,
         },
     },
+    plugins:[
+        emailOTP({
+            async sendVerificationOTP({email, otp}) {
+                //sending the email to the user 
+                 await resend.emails.send({
+                    from: 'Sengicarlos <onboarding@resend.dev>',
+                    to: [email],
+                    subject: 'SengiCarlosLMS - Verify your email',
+                    html: `<p>Your verification code is: <strong>${otp}</strong></p>`,
+                    });
+
+            },
+        })
+    ]
 });
