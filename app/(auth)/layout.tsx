@@ -1,7 +1,10 @@
 import { buttonVariants } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
+
+import Logo from "@/public/Logo.png";
 
 export default function AuthLayout({children}: {children:React.ReactNode}) {
     return (
@@ -19,9 +22,17 @@ export default function AuthLayout({children}: {children:React.ReactNode}) {
             <Link className="flex items-center gap-2 self-center font-medium"
                 href="/"
             >
+            <Image  src={Logo} alt="Logo" width={32} height={32}/>
                 SengiCarlos MLS.
             </Link>
             {children}
+
+            <div className="text-balance text-center text-xs text-muted-foreground">
+                By clicking continue, you agree to our{" "}
+                <span className="hover:text-primary hover:underline">Terms of service</span> 
+                {" "}
+                and <span className="hover:text-primary hover:underline">Privacy Policy</span>.
+            </div>
         </div>
         </div>
     )
