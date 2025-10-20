@@ -23,7 +23,7 @@ export default arcjet({
 
     rules: [
         shield({
-            mode: 'LIVE',
+            mode: 'DRY_RUN',
         })
     ],
 });

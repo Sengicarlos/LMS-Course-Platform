@@ -8551,7 +8551,7 @@ const __TURBOPACK__default__export__ = (0, __TURBOPACK__imported__module__$5b$pr
     ],
     rules: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$arcjet$40$1$2e$0$2e$0$2d$beta$2e$13$2f$node_modules$2f$arcjet$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["shield"])({
-            mode: 'LIVE'
+            mode: 'DRY_RUN'
         })
     ]
 });
