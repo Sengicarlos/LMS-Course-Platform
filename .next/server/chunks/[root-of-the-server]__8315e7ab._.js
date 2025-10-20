@@ -1,0 +1,3 @@
+module.exports=[75202,e=>e.a(async(t,r)=>{try{let t=await e.y("prettier/plugins/html");e.n(t),r()}catch(e){r(e)}},!0),35167,e=>e.a(async(t,r)=>{try{let t=await e.y("prettier/standalone");e.n(t),r()}catch(e){r(e)}},!0),81111,(e,t,r)=>{t.exports=e.x("node:stream",()=>require("node:stream"))},21470,e=>{e.v(t=>Promise.all(["server/chunks/[root-of-the-server]__d0aee9be._.js","server/chunks/898e1_next_dist_compiled_a9b4683a._.js"].map(t=>e.l(t))).then(()=>t(42498)))}];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__8315e7ab._.js.map
