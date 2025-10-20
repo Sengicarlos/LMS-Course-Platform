@@ -1,4 +1,4 @@
-
+import { auth } from "@/lib/auth";
 import ip from "@arcjet/ip";
 import arcjet, {
   type ArcjetDecision,
@@ -8,21 +8,20 @@ import arcjet, {
   type SlidingWindowRateLimitOptions,
   detectBot,
   protectSignup,
-  shield,
   slidingWindow,
-} from "@arcjet/next";
+} from "@arcjet/next"; // types from @arcjet/next
+import arcjetInstance from "@/lib/arcjet"; // configured instance
 import { toNextJsHandler } from "better-auth/next-js";
 import { NextRequest } from "next/server";
 
-// The arcjet instance is created outside of the handler
-
-
+// Email validation options
 const emailOptions = {
   mode: "LIVE", // will block requests. Use "DRY_RUN" to log only
   // Block emails that are disposable, invalid, or have no MX records
   block: ["DISPOSABLE", "INVALID", "NO_MX_RECORDS"],
 } satisfies EmailOptions;
 
+// Bot protection options
 const botOptions = {
   mode: "LIVE",
   // configured with a list of bots to allow from
@@ -30,12 +29,14 @@ const botOptions = {
   allow: [], // prevents bots from submitting the form
 } satisfies BotOptions;
 
+// Sliding window rate limit options
 const rateLimitOptions = {
   mode: "LIVE",
   interval: "2m", // counts requests over a 2 minute sliding window
   max: 5, // allows 5 submissions within the window
 } satisfies SlidingWindowRateLimitOptions<[]>;
 
+// Signup protection options combining all rules
 const signupOptions = {
   email: emailOptions,
   // uses a sliding window rate limit
@@ -70,19 +71,14 @@ async function protect(req: NextRequest): Promise<ArcjetDecision> {
     // the email validation checks as well. See
     // https://www.better-auth.com/docs/concepts/hooks#example-enforce-email-domain-restriction
     if (typeof body.email === "string") {
-      return aj
-        .withRule(protectSignup(signupOptions))
-        .protect(req, { email: body.email, userId });
+      return arcjetInstance.protect(req, { email: body.email, fingerprint: userId }, protectSignup(signupOptions));
     } else {
       // Otherwise use rate limit and detect bot
-      return aj
-        .withRule(detectBot(botOptions))
-        .withRule(slidingWindow(rateLimitOptions))
-        .protect(req, { userId });
+      return arcjetInstance.protect(req, { fingerprint: userId }, detectBot(botOptions), slidingWindow(rateLimitOptions));
     }
   } else {
     // For all other auth requests
-    return aj.withRule(detectBot(botOptions)).protect(req, { userId });
+    return arcjetInstance.protect(req, { fingerprint: userId }, detectBot(botOptions));
   }
 }
 
