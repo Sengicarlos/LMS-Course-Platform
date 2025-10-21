@@ -1016,11 +1016,6 @@
     aspect-ratio: var(--aspect-video);
   }
 
-  .\!size-5 {
-    width: calc(var(--spacing) * 5) !important;
-    height: calc(var(--spacing) * 5) !important;
-  }
-
   .size-2 {
     width: calc(var(--spacing) * 2);
     height: calc(var(--spacing) * 2);

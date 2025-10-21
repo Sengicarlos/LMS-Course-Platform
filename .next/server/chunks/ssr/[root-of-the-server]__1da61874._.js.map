@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 19, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/sengicarlos/Desktop/S_Tier%20Coding/lms-course-platform/app/admin/page.tsx"],"sourcesContent":["export default function AdminIndexPage(){\n  return(\n    <div>\n       <h1> hello world </h1>\n    </div>\n  )\n}"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,6WAAC;kBACE,cAAA,6WAAC;sBAAG;;;;;;;;;;;AAGX","debugId":null}}]
+}
