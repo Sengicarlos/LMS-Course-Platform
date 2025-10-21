@@ -5,6 +5,9 @@ import Image from "next/image";
 import { ThemeToggle } from "@/components/ui/themeToggle";
 import { authClient } from "@/lib/auth-client";
 import { buttonVariants } from "@/components/ui/button";
+import { User } from "lucide-react";
+import { UserDropDown } from "./UserDropDown";
+
 
 const navigationItems =[
     { name: "Home", href: "/" },
@@ -35,7 +38,7 @@ export function Navbar() {
                 <div className="flex items-center space-x-4">
                     <ThemeToggle/>
                     {isPending ? null : session ? (
-                        <p>Logged in</p>
+                       <UserDropDown email={session.user.email} Image={session.user.image  || ""} name={session.user.name} />   
                     ) : (
                        <>
                         <Link href="/login" className={buttonVariants({ variant: "secondary"})}>
