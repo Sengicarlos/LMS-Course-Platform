@@ -2135,9 +2135,27 @@ function NavUser({ user }) {
     }, this);
 }
 }),
+"[externals]/next/dist/server/app-render/action-async-storage.external.js [external] (next/dist/server/app-render/action-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/server/app-render/action-async-storage.external.js", () => require("next/dist/server/app-render/action-async-storage.external.js"));
+
+module.exports = mod;
+}),
+"[externals]/next/dist/server/app-render/work-unit-async-storage.external.js [external] (next/dist/server/app-render/work-unit-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/server/app-render/work-unit-async-storage.external.js", () => require("next/dist/server/app-render/work-unit-async-storage.external.js"));
+
+module.exports = mod;
+}),
+"[externals]/next/dist/server/app-render/work-async-storage.external.js [external] (next/dist/server/app-render/work-async-storage.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/server/app-render/work-async-storage.external.js", () => require("next/dist/server/app-render/work-async-storage.external.js"));
+
+module.exports = mod;
+}),
 "[project]/components/app-sidebar.tsx [app-ssr] (ecmascript)", ((__turbopack_context__, module, exports) => {
 
-const e = new Error("Could not parse module '[project]/components/app-sidebar.tsx'\n\nExpected '</', got 'jsx text (\n            )'");
+const e = new Error("Could not parse module '[project]/components/app-sidebar.tsx'\n\nExpected '</', got 'alt'");
 e.code = 'MODULE_UNPARSABLE';
 throw e;
 }),
@@ -6016,4 +6034,4 @@ function TableCellViewer({ item }) {
 }),
 ];
 
-//# sourceMappingURL=_4f3d87fa._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__f50691db._.js.map
