@@ -1049,10 +1049,6 @@
     min-height: calc(var(--spacing) * 16);
   }
 
-  .min-h-\[120p\] {
-    min-height: 120p;
-  }
-
   .min-h-\[120px\] {
     min-height: 120px;
   }
@@ -1978,6 +1974,10 @@
 
   .text-foreground {
     color: var(--foreground);
+  }
+
+  .text-muted {
+    color: var(--muted);
   }
 
   .text-muted-foreground {
@@ -3491,12 +3491,6 @@
   @media (min-width: 48rem) {
     .md\:flex {
       display: flex;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:grid {
-      display: grid;
     }
   }
 
