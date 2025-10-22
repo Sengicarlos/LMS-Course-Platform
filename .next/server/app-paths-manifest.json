@@ -1,9 +1,5 @@
 {
-  "/(auth)/login/page": "app/(auth)/login/page.js",
-  "/(public)/page": "app/(public)/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/admin/courses/page": "app/admin/courses/page.js",
-  "/admin/page": "app/admin/page.js",
+  "/admin/courses/create/page": "app/admin/courses/create/page.js",
   "/api/auth/[...all]/route": "app/api/auth/[...all]/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js"
 }
