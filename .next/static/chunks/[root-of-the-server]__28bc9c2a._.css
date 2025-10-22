@@ -1141,6 +1141,14 @@
     min-height: calc(var(--spacing) * 16);
   }
 
+  .min-h-\[120p\] {
+    min-height: 120p;
+  }
+
+  .min-h-\[120px\] {
+    min-height: 120px;
+  }
+
   .min-h-svh {
     min-height: 100svh;
   }
@@ -3575,6 +3583,12 @@
   @media (min-width: 48rem) {
     .md\:flex {
       display: flex;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:grid {
+      display: grid;
     }
   }
 

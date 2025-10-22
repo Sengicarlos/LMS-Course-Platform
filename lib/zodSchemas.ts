@@ -2,7 +2,21 @@
 import {z} from 'zod' 
 
 export const courseLevels =["Beginner","Intermediate","Advanced"] as const;
-export const courseStatus = ["Draft","Published","Archived"] as const
+export const courseStatus = ["Draft","Published","Archived"] as const;
+
+export const courseCategory = [
+    "Development",
+    "Bussiness",
+    "Finance",
+    "IT & Software",
+    "Office Productivity",
+    "Personal Development",
+    "Design",
+    "Marketing",
+    "Health & Fitness",
+    "Music",
+    "Teaching & Academics",
+] as const;
 
 export const courseSchema = z.object({
     title: z.string().min(3, {message:"Title must be at least 3 characters"}).max(100,{message: "Title must be as most 100 character long"}),
@@ -11,7 +25,9 @@ export const courseSchema = z.object({
     price: z.coerce.number().min(1,  {message:"Price must be a positive number"}),
     duration: z.coerce.number().min(1,  {message:"Duration must be at least 1hr characters"}).max(500,  {message:"Duration must be at most 100hr"}),
     level: z.enum(courseLevels,  {message:"Level is Required"}),
-    category:z.string(),
+    category:z.enum(courseCategory, {
+        message: "Category is required",
+    }),
     smallDescription: z.string().min(3,  {message:"smallDescription must be at least 3 characters"}).max(200,  {message:"smallDescrition must be at most 200 characters"}),
     slug: z.string().min(3,  {message:"slug must be at least 3 characters long"}),
     status: z.enum(courseStatus,  {message:"Status is Required"}),
